@@ -17,10 +17,13 @@ const Card = () => {
         <div className="flex justify-between">
           <div className="flex flex-col">
             <span>Price:</span>
-            <span className="font-bold text-slate-900">$200</span> 
+            <span className="font-bold text-slate-900">$200</span>
           </div>
-          <button type="button" className="bg-violet-500 w-16 flex justify-center items-center border rounded-lg">
-            <img src={CartIcon} alt="" width={28} height={28} className=""/>
+          <button
+            type="button"
+            className="bg-violet-500 w-16 flex justify-center items-center border rounded-lg"
+          >
+            <img src={CartIcon} alt="" width={28} height={28} className="" />
           </button>
         </div>
       </div>

@@ -10,11 +10,9 @@ const Sidebar = () => {
           <span className="text-gray-500">T shirt</span>
         </div>
       </div>
-      <div className="">
-
-      </div>
+      <div className=""></div>
     </div>
-  )
-}
+  );
+};
 
 export default Sidebar;

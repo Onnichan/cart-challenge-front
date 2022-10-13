@@ -5,6 +5,6 @@ export const getProducts = async (page, size) => {
   const result = await products.json();
   console.log(result);
   return result;
-}
+};
 
 // export const getFilter = async ()
