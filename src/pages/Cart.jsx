@@ -1,8 +1,8 @@
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { deleteCart } from "../redux//actions/index";
 
 const Cart = () => {
-  const state = useSelector((state) => state.addItem);
+  // const state = useSelector((state) => state.addItem);
   const dispatch = useDispatch();
 
   const handleClose = (item) => {
@@ -28,7 +28,9 @@ const Cart = () => {
     );
   };
 
-  return <div></div>;
+  return <div>
+    {cartItems}
+  </div>;
 };
 
 export default Cart;
