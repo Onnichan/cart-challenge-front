@@ -27,19 +27,29 @@ const Product = () => {
     return (
       <>
         <div className="w-2/4">
-          <img src={product.image} alt={product.name} width="400px" height="400px"/>
+          <img
+            src={product.image}
+            alt={product.name}
+            width="400px"
+            height="400px"
+          />
         </div>
         <div className="w-2/4">
           {/* <h4 className="font-bold text-slate-800">{product.Category.name}</h4> */}
         </div>
         <h1 className="p-5">{product.name}</h1>
         <p className="text-slate-500">Rating</p>
-        <h3 className="p-6 font-bold my-4">
-          ${product.price}
-        </h3>
+        <h3 className="p-6 font-bold my-4">${product.price}</h3>
         <p className="text-slate-500">{product.description}</p>
-        <button className="bg-slate-800 text-slate-50 p-5 rounded-md">Add to cart</button>
-        <NavLink to="/cart" className="bg-slate-800 text-slate-50 p-5 rounded-md">Go to Cart</NavLink>
+        <button className="bg-slate-800 text-slate-50 p-5 rounded-md">
+          Add to cart
+        </button>
+        <NavLink
+          to="/cart"
+          className="bg-slate-800 text-slate-50 p-5 rounded-md"
+        >
+          Go to Cart
+        </NavLink>
       </>
     );
   };

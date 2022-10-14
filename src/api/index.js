@@ -19,11 +19,10 @@ export const productsByCategory = async (category) => {
   const result = await productsByCategory.json();
   // console.log(result);
   return result;
-}
-
+};
 
 export const getProductById = async (id) => {
   const productById = await fetch(`${API_URL}/products/${id}`);
   const result = await productById.json();
   return result;
-}
+};

@@ -4,9 +4,6 @@ import { NavLink } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types
 const Card = ({ product }) => {
-
-
-
   return (
     <div className="flex flex-col rounded-lg border-slate-900 shadow-lg">
       <div className="w-full h-60 flex justify-center items-center">

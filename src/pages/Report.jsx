@@ -1,9 +1,5 @@
 export const Report = () => {
-  return (
-    <div>
-      report
-    </div>
-  )
-}
+  return <div>report</div>;
+};
 
 export default Report;

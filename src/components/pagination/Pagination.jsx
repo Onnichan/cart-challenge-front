@@ -2,7 +2,6 @@
 // import { Link } from "react-router-dom";
 
 export const Pagination = ({ currentPage, total, onHandlePageChange }) => {
-
   // const renderPath = (page) => {
   //   return `?page=${page}`
   // }
@@ -31,7 +30,7 @@ export const Pagination = ({ currentPage, total, onHandlePageChange }) => {
           />
         </svg>
       </a>
-      {Array.from({length: total}, (v, i) => i+1).map((page, index) => {
+      {Array.from({ length: total }, (v, i) => i + 1).map((page, index) => {
         return (
           <button
             // to={renderPath(page)}

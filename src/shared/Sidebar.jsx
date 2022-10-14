@@ -2,7 +2,6 @@
 import { productsByCategory } from "../api";
 
 const Sidebar = ({ categories, onHandleFilter }) => {
-
   return (
     <div className="flex flex-col w-1/5 p-3 border-r-2 border-slate-300">
       <div className="flex flex-col">

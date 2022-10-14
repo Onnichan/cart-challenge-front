@@ -53,14 +53,13 @@ const Products = () => {
   const handleFilter = async (category) => {
     try {
       const data = await productsByCategory(category);
-      console.log(data, 'data');
+      console.log(data, "data");
       setProducts(data);
       setIsFilter(true);
       setIsLoading(false);
     } catch (error) {
       console.log(error);
     }
-
   };
 
   return (
