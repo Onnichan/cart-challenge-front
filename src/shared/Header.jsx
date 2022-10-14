@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 const Header = () => {
-
-  const state = useSelector((state) => state.handleCart)
+  const state = useSelector((state) => state.handleCart);
   return (
     <nav className="relative bg-white shadow dark:bg-gray-800">
       <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
@@ -96,7 +95,12 @@ const Header = () => {
                 />
               </svg>
 
-              <span className="absolute -top-2 -right-2 text-white w-4 h-4 p-1 bg-red-600 flex justify-center items-center rounded-full" style={{ fontSize: '10px'}}>{state.length}</span>
+              <span
+                className="absolute -top-2 -right-2 text-white w-4 h-4 p-1 bg-red-600 flex justify-center items-center rounded-full"
+                style={{ fontSize: "10px" }}
+              >
+                {state.length}
+              </span>
             </a>
           </div>
         </div>

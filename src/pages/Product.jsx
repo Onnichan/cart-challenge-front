@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useDispatch} from "react-redux";
+import { useDispatch } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
 import { getProductById } from "../api";
 import { addCart } from "../redux/actions";
@@ -12,7 +12,7 @@ const Product = () => {
   const dispatch = useDispatch();
   const addProduct = (product) => {
     dispatch(addCart(product));
-  } 
+  };
 
   useEffect(() => {
     const getProduct = async () => {
@@ -47,7 +47,10 @@ const Product = () => {
           {/* <p className="text-slate-500">Rating</p> */}
           <h3 className="py-6 font-bold my-1 text-3xl">$ {product.price}</h3>
           <p className="text-slate-500 mb-5">{product.description}</p>
-          <button className="bg-slate-800 mr-5 text-slate-50 p-3 rounded-md" onClick={() => addProduct(product)}>
+          <button
+            className="bg-slate-800 mr-5 text-slate-50 p-3 rounded-md"
+            onClick={() => addProduct(product)}
+          >
             Add to cart
           </button>
           <NavLink

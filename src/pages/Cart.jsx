@@ -6,8 +6,8 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const handleClose = (item) => {
-    dispatch(deleteCart(item))
-  }
+    dispatch(deleteCart(item));
+  };
 
   const cartItems = (cartItem) => {
     return (
