@@ -7,7 +7,7 @@ const Card = ({ product }) => {
   return (
     <div className="flex flex-col rounded-lg border-slate-900 shadow-lg">
       <div className="w-full h-60 flex justify-center items-center">
-        <img src={product.image} alt="asdas" className="block w-1/3" />
+        <img src={product.image} alt={product.name} className="block h-full" />
       </div>
       <div className="p-4 flex flex-col gap-2">
         <span className="text-slate-500">{product.name}</span>
