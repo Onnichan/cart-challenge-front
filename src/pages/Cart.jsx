@@ -1,4 +1,4 @@
-import {  useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { deleteCart } from "../redux//actions/index";
 
 const Cart = () => {
@@ -28,9 +28,7 @@ const Cart = () => {
     );
   };
 
-  return <div>
-    {cartItems}
-  </div>;
+  return <div>{cartItems}</div>;
 };
 
 export default Cart;
