@@ -1,5 +1,7 @@
+import OffCanvas from "../shared/OffCanvas";
+
 const Home = () => {
-  return <div>Home</div>;
+  return <OffCanvas></OffCanvas>;
 };
 
 export default Home;
