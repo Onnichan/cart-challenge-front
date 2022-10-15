@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 // import { useState } from "react";
 
 const Header = () => {
-
   // const [open, setOpen] = useState(false);
   const state = useSelector((state) => state.addItem);
   return (
