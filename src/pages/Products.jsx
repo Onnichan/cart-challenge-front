@@ -68,7 +68,10 @@ const Products = () => {
         {categories && (
           <Sidebar categories={categories} onHandleFilter={handleFilter} />
         )}
-        <div className="sm:w-4/5">
+        <div className="sm:w-4/5 p-3">
+          <h3 className="text-lg text-heading font-bold pt-8 text-right pr-3">
+            Total de articulos {products.totalItems}
+          </h3>
           {isLoading ? "Cargando" : <Grid products={products.result} />}
           {!isFilter && (
             <Pagination

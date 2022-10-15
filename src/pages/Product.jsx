@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { NavLink, useParams } from "react-router-dom";
 import { getProductById } from "../api";
-import { addCart } from "../redux/actions";
+import { addItem } from "../redux/actions";
 
 const Product = () => {
   const { id } = useParams();
@@ -11,7 +11,7 @@ const Product = () => {
 
   const dispatch = useDispatch();
   const addProduct = (product) => {
-    dispatch(addCart(product));
+    dispatch(addItem(product));
   };
 
   useEffect(() => {

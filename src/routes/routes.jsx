@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Products from "../pages/Products";
 import Report from "../pages/Report";
 import Header from "../shared/Header";
-import Footer from "../shared/Footer";
+// import Footer from "../shared/Footer";
 import Product from "../pages/Product";
 import Cart from "../pages/Cart";
 
@@ -16,7 +16,7 @@ const Router = () => {
         <Route path="/products/:id" element={<Product />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
       </Routes>
-      <Footer></Footer>
+      {/* <Footer></Footer> */}
     </BrowserRouter>
   );
 };

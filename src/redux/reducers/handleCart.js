@@ -1,38 +1,42 @@
 /* eslint-disable no-case-declarations */
 /* eslint-disable no-unreachable */
 /* eslint-disable no-unused-vars */
-const cart = [];
+const addItem = [];
 
-const handleCart = (state = cart, action) => {
+const addItems = (state = addItem, action) => {
   const product = action.payload;
   switch (action.type) {
     case "ADDITEM":
-      const exist = state.find((x) => x.id === product.id);
-      if (exist) {
-        return state.map((x) =>
-          x.id === product.id ? { ...x, qty: x.qty + 1 } : x
-        );
-      } else {
-        const product = action.payload;
-        return [
-          ...state,
-          {
-            ...product,
-            qty: 1,
-          },
-        ];
-      }
+      return [...state, action.payload];
+      // const exist = state.find((x) => x.id === product.id);
+      // if (exist) {
+      //   return state.map((x) =>
+      //     x.id === product.id ? { ...x, qty: x.qty + 1 } : x
+      //   );
+      // } else {
+      //   const product = action.payload;
+      //   return [
+      //     ...state,
+      //     {
+      //       ...product,
+      //       qty: 1,
+      //     },
+      //   ];
+      // }
       break;
 
     case "DELETEITEM":
-      const exist2 = state.find((x) => x.id === product.id);
-      if (exist2.qty === 1) {
-        return state.filter((x) => x.id !== exist2.id);
-      } else {
-        return state.map((x) =>
-          x.id === product.id ? { ...x, qty: x.qty - 1 } : x
-        );
-      }
+      // const exist2 = state.find((x) => x.id === product.id);
+      // if (exist2.qty === 1) {
+      //   return state.filter((x) => x.id !== exist2.id);
+      // } else {
+      //   return state.map((x) =>
+      //     x.id === product.id ? { ...x, qty: x.qty - 1 } : x
+      //   );
+      // }
+      return (state = state.filter((x) => {
+        return x.id !== action.payload.id;
+      }));
 
       break;
     default:
@@ -41,4 +45,4 @@ const handleCart = (state = cart, action) => {
   }
 };
 
-export default handleCart;
+export default addItems;

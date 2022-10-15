@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useSelector } from "react-redux";
+// import { useState } from "react";
+
 const Header = () => {
-  const state = useSelector((state) => state.handleCart);
+
+  // const [open, setOpen] = useState(false);
+  const state = useSelector((state) => state.addItem);
   return (
     <nav className="relative bg-white shadow dark:bg-gray-800">
       <div className="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
@@ -58,7 +62,7 @@ const Header = () => {
 
         <div
           // className="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']"
-          className="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center"
+          className="sticky inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white dark:bg-gray-800 md:mt-0 md:p-0 md:top-0 md:relative md:bg-transparent md:w-auto md:opacity-100 md:translate-x-0 md:flex md:items-center"
         >
           <div className="flex flex-col md:flex-row md:mx-6">
             <Link
@@ -76,7 +80,8 @@ const Header = () => {
           </div>
 
           <div className="flex justify-center md:block">
-            <a
+            <NavLink
+              to="/cart"
               className="relative text-gray-700 transition-colors duration-300 transform dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-300"
               href="#"
             >
@@ -101,7 +106,7 @@ const Header = () => {
               >
                 {state.length}
               </span>
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>
